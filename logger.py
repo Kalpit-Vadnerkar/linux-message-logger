@@ -21,7 +21,10 @@ username = getpass.getuser()
 timestamp = datetime.datetime.fromtimestamp(time.time())
 
 # send the message using the wall command
-command = "wall " +  msg
+if choice == "One":
+	command = "write " + receiver + msg
+elif choice == "All":
+	command = "wall " +  msg
 os.system(command)
 
 #logging the message
